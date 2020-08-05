@@ -86,9 +86,9 @@
         
  11.Добавляем репозиторий
  
-         cat >> /etc/yum.repos.d/otus.repo << EOF
-         [otus]
-         name=otus-linux
+         cat >> /etc/yum.repos.d/linux.repo << EOF
+         [linux]
+         name=linux
          baseurl=http://localhost/repo
          gpgcheck=0
          enabled=1
@@ -96,12 +96,13 @@
  
  12.Убедимся что репозиторий подключен и с ним все ок.
  
-         [root@centos yum.repos.d]# yum repolist enabled | grep otus
-        otus                                otus-linux                                 2
+         [root@centos yum.repos.d]# yum repolist enabled | grep 
+         
+        linux                                linux                                 2
 
-         [root@centos yum.repos.d]# yum list | grep otus
-        nginx.x86_64                                1:1.14.1-1.el7_4.ngx       otus     
-        percona-release.noarch                      0.1-6                      otus 
+         [root@centos yum.repos.d]# yum list | grep linux
+        nginx.x86_64                                1:1.14.1-1.el7_4.ngx       linux     
+        percona-release.noarch                      0.1-6                      linux 
  
 
 
